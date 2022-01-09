@@ -31,9 +31,9 @@ pipeline {
     }
     stage('Deploy Application') {
         steps {
-		sh 'scp deploy.sh ${REMOTE_USER}@${REMOTE_HOST}:~/'
-                sh 'ssh ${REMOTE_USER}@${REMOTE_HOST} "chmod +x deploy.sh"'
-                sh 'ssh ${REMOTE_USER}@${REMOTE_HOST} ./deploy.ssh'
+		sh 'scp -i /home/ubuntu/CourseAssignment.pem deploy.sh ubuntu@10.0.30.248:~/'
+                sh 'scp -i /home/ubuntu/CourseAssignment.pem deploy.sh ubuntu@10.0.30.248:~/ "chmod +x deploy.sh"'
+                sh 'scp -i /home/ubuntu/CourseAssignment.pem deploy.sh ubuntu@10.0.30.248:~/ ./deploy.ssh'
 	}
     }
   }
