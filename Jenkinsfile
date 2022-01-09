@@ -11,7 +11,7 @@ pipeline {
      
     stage('Docker Build') {
         steps {
-            sh 'docker build .'
+            sh 'docker build . -t 553397529585.dkr.ecr.us-east-1.amazonaws.com/prashant_course_assignment:latest'
         }
     }     
   }
