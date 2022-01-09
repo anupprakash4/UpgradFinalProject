@@ -32,7 +32,7 @@ pipeline {
     stage('Deploy Application') {
         steps {
 		sh 'scp -o StrictHostKeyChecking=no -i /home/ubuntu/CourseAssignment.pem deploy.sh ubuntu@10.0.30.248:~/'
-                sh 'ssh -o StrictHostKeyChecking=no -i /home/ubuntu/CourseAssignment.pem deploy.sh ubuntu@10.0.30.248 "chmod +x deploy.sh"'
+                sh 'ssh -o StrictHostKeyChecking=no -i /home/ubuntu/CourseAssignment.pem deploy.sh ubuntu@10.0.30.248 "chmod +x ~/deploy.sh"'
                 sh 'ssh -o StrictHostKeyChecking=no -i /home/ubuntu/CourseAssignment.pem deploy.sh ubuntu@10.0.30.248 "sudo ~/deploy.sh"'
 	}
     }
