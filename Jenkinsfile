@@ -11,7 +11,7 @@ pipeline {
      
     stage('Docker Build') {
         steps {
-            sudo sh 'docker build .'
+            sh 'sudo docker build .'
         }
     }     
   }
