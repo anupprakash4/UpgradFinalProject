@@ -22,5 +22,12 @@ pipeline {
         }
 	}
     }
+    stage('Push Docker image to ECR') {
+        steps {
+		script {
+            sh 'docker push 553397529585.dkr.ecr.us-east-1.amazonaws.com/prashant_course_assignment:latest'
+        }
+	}
+    }
   }
 }
